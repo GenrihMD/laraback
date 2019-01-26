@@ -12,9 +12,27 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = array(
+        'slider' => array(
+
+            array(
+                'title' => 'We Are Creative Agency',
+                'background' => 'green'
+            ),
+            array(
+                'title' => 'We Are Progressive Agency',
+                'background' => 'red'
+            ),
+            array(
+                'title' => 'WE ARE YOULOOKFOR AGENCY',
+                'background' => 'blue'
+            ),
+        )
+    );
+    return view('welcome', $data);
 });
 
 Route::get('/test', function () {
     return view('test');
 });
+
